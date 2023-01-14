@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1C-разработчик</title>
+    <link rel="stylesheet" href="{% static "css/styles.css" %}">
+</head>
+<body>
+<header>
+    <img class="logo" src="{% static 'images/logotip.png' %}">
+</header>
+<main>
+    <div class="body">
+        <div class="navigation">
+            <nav>
+                <p class="nav_text">1С-разработчик</p>
+                <ul>
+                    <li><a href="/">Главная страница</a></li>
+                    <li><a href={% url 'demend' %}>Востребованность</a></li>
+                    <li><a href={% url 'geography' %}>География</a></li>
+                    <li><a href={% url 'skills' %}>Навыки</a></li>
+                    <li><a href={% url 'lastVacancy' %}>Последние вакансии</a></li>
+                </ul>
+                <p class="nav_text_foot">Борщевская Жанна Александровна<br>РИ-210911, АТ-29</p>
+            </nav>
+        </div>
+        {% for geography in geography_info %}
+        <div class="home_text" style="margin-top: 5%">
+            <img class="geography_graph_1" src="{{ geography.photo1.url }}"/>
+            <img class="geography_graph_2" src="{{ geography.photo2.url }}"/>
+            <div class="tables">
+                {{ geography.content|safe }}
+            </div>
+            <h4 class="graph_title1">{{ geography.first_title }}</h4>
+            <h4 class="graph_title2">{{ geography.second_title }}</h4>
+        </div>
+    </div>
+{% endfor %}
+</main>
+<footer>
+</footer>
+</body>
+</html>

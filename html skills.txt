@@ -1,0 +1,473 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1C-разработчик</title>
+    <link rel="stylesheet" href="{% static "css/styles.css" %}">
+</head>
+<body>
+<header>
+    <img class="logo" src="{% static 'images/logotip.png' %}">
+</header>
+<main>
+    <div class="body">
+        <div class="navigation" style="height: 1000px">
+            <nav>
+                <p class="nav_text">1С-разработчик</p>
+                <ul>
+                    <li><a href="/">Главная страница</a></li>
+                    <li><a href={% url 'demend' %}>Востребованность</a></li>
+                    <li><a href={% url 'geography' %}>География</a></li>
+                    <li><a href={% url 'skills' %}>Навыки</a></li>
+                    <li><a href={% url 'lastVacancy' %}>Последние вакансии</a></li>
+                </ul>
+                <p class="nav_text_foot">Борщевская Жанна Александровна<br>РИ-210911, АТ-29</p>
+            </nav>
+        </div>
+        <div class="home_text">
+            <h1>Топ-10 навыков по годам</h1>
+            <div class="tables_skills">
+                <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>2015</th>
+      <th>Кол-во</th>
+    </tr>
+    <tr>
+      <th>Навык</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1С программирование</th>
+      <td>339</td>
+    </tr>
+    <tr>
+      <th>1С-Битрикс</th>
+      <td>218</td>
+    </tr>
+    <tr>
+      <th>1С: Предприятие 8</th>
+      <td>201</td>
+    </tr>
+    <tr>
+      <th>PHP</th>
+      <td>182</td>
+    </tr>
+    <tr>
+      <th>MySQL</th>
+      <td>148</td>
+    </tr>
+    <tr>
+      <th>HTML</th>
+      <td>146</td>
+    </tr>
+    <tr>
+      <th>JavaScript</th>
+      <td>145</td>
+    </tr>
+    <tr>
+      <th>MS SQL</th>
+      <td>141</td>
+    </tr>
+    <tr>
+      <th>CSS</th>
+      <td>138</td>
+    </tr>
+    <tr>
+      <th>HTML5</th>
+      <td>134</td>
+    </tr>
+  </tbody>
+</table>
+                <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>2016</th>
+      <th>Кол-во</th>
+    </tr>
+    <tr>
+      <th>Навык</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1С программирование</th>
+      <td>1502</td>
+    </tr>
+    <tr>
+      <th>1С: Предприятие 8</th>
+      <td>1058</td>
+    </tr>
+    <tr>
+      <th>1С: Бухгалтерия</th>
+      <td>641</td>
+    </tr>
+    <tr>
+      <th>1С: Зарплата и управление персоналом</th>
+      <td>610</td>
+    </tr>
+    <tr>
+      <th>1С: Управление Торговлей</th>
+      <td>567</td>
+    </tr>
+    <tr>
+      <th>1С: Управление Производственным Предприятием</th>
+      <td>532</td>
+    </tr>
+    <tr>
+      <th>1С: Комплексная автоматизация</th>
+      <td>436</td>
+    </tr>
+    <tr>
+      <th>1С-Битрикс</th>
+      <td>427</td>
+    </tr>
+    <tr>
+      <th>1С: Документооборот</th>
+      <td>366</td>
+    </tr>
+    <tr>
+      <th>1C: Бухгалтерия</th>
+      <td>338</td>
+    </tr>
+  </tbody>
+</table>
+                <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>2017</th>
+      <th>Кол-во</th>
+    </tr>
+    <tr>
+      <th>Навык</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1С программирование</th>
+      <td>2712</td>
+    </tr>
+    <tr>
+      <th>1С: Предприятие 8</th>
+      <td>1899</td>
+    </tr>
+    <tr>
+      <th>1С: Бухгалтерия</th>
+      <td>1340</td>
+    </tr>
+    <tr>
+      <th>1С: Зарплата и управление персоналом</th>
+      <td>1137</td>
+    </tr>
+    <tr>
+      <th>1С: Управление Торговлей</th>
+      <td>1105</td>
+    </tr>
+    <tr>
+      <th>1С: Управление Производственным Предприятием</th>
+      <td>889</td>
+    </tr>
+    <tr>
+      <th>1С-Битрикс</th>
+      <td>676</td>
+    </tr>
+    <tr>
+      <th>1С: Документооборот</th>
+      <td>588</td>
+    </tr>
+    <tr>
+      <th>Обновление конфигурации 1С</th>
+      <td>561</td>
+    </tr>
+    <tr>
+      <th>1С: Комплексная автоматизация</th>
+      <td>543</td>
+    </tr>
+  </tbody>
+</table>
+                <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>2018</th>
+      <th>Кол-во</th>
+    </tr>
+    <tr>
+      <th>Навык</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1С программирование</th>
+      <td>3956</td>
+    </tr>
+    <tr>
+      <th>1С: Предприятие 8</th>
+      <td>2953</td>
+    </tr>
+    <tr>
+      <th>1С: Бухгалтерия</th>
+      <td>1972</td>
+    </tr>
+    <tr>
+      <th>1С: Зарплата и управление персоналом</th>
+      <td>1717</td>
+    </tr>
+    <tr>
+      <th>1С: Управление Торговлей</th>
+      <td>1691</td>
+    </tr>
+    <tr>
+      <th>1С: Управление Производственным Предприятием</th>
+      <td>1321</td>
+    </tr>
+    <tr>
+      <th>1С: Комплексная автоматизация</th>
+      <td>920</td>
+    </tr>
+    <tr>
+      <th>Обновление конфигурации 1С</th>
+      <td>910</td>
+    </tr>
+    <tr>
+      <th>1С: Документооборот</th>
+      <td>855</td>
+    </tr>
+    <tr>
+      <th>1C: Бухгалтерия</th>
+      <td>729</td>
+    </tr>
+  </tbody>
+</table>
+                <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>2019</th>
+      <th>Кол-во</th>
+    </tr>
+    <tr>
+      <th>Навык</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1С программирование</th>
+      <td>5272</td>
+    </tr>
+    <tr>
+      <th>1С: Предприятие 8</th>
+      <td>4038</td>
+    </tr>
+    <tr>
+      <th>1С: Бухгалтерия</th>
+      <td>2790</td>
+    </tr>
+    <tr>
+      <th>1С: Зарплата и управление персоналом</th>
+      <td>2473</td>
+    </tr>
+    <tr>
+      <th>1С: Управление Торговлей</th>
+      <td>2345</td>
+    </tr>
+    <tr>
+      <th>1С: Управление Производственным Предприятием</th>
+      <td>1469</td>
+    </tr>
+    <tr>
+      <th>1С: Документооборот</th>
+      <td>1466</td>
+    </tr>
+    <tr>
+      <th>Обновление конфигурации 1С</th>
+      <td>1103</td>
+    </tr>
+    <tr>
+      <th>1С: Комплексная автоматизация</th>
+      <td>1074</td>
+    </tr>
+    <tr>
+      <th>1C: Бухгалтерия</th>
+      <td>1014</td>
+    </tr>
+  </tbody>
+</table>
+                <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>2020</th>
+      <th>Кол-во</th>
+    </tr>
+    <tr>
+      <th>Навык</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1С программирование</th>
+      <td>6392</td>
+    </tr>
+    <tr>
+      <th>1С: Предприятие 8</th>
+      <td>5309</td>
+    </tr>
+    <tr>
+      <th>1С: Бухгалтерия</th>
+      <td>3619</td>
+    </tr>
+    <tr>
+      <th>1С: Зарплата и управление персоналом</th>
+      <td>3221</td>
+    </tr>
+    <tr>
+      <th>1С: Управление Торговлей</th>
+      <td>3082</td>
+    </tr>
+    <tr>
+      <th>1С: Документооборот</th>
+      <td>2209</td>
+    </tr>
+    <tr>
+      <th>1C: Бухгалтерия</th>
+      <td>1638</td>
+    </tr>
+    <tr>
+      <th>1С: Управление Производственным Предприятием</th>
+      <td>1435</td>
+    </tr>
+    <tr>
+      <th>Обновление конфигурации 1С</th>
+      <td>1249</td>
+    </tr>
+    <tr>
+      <th>1С: Розница</th>
+      <td>1202</td>
+    </tr>
+  </tbody>
+</table>
+                <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>2021</th>
+      <th>Кол-во</th>
+    </tr>
+    <tr>
+      <th>Навык</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1С программирование</th>
+      <td>4136</td>
+    </tr>
+    <tr>
+      <th>1С: Предприятие 8</th>
+      <td>3340</td>
+    </tr>
+    <tr>
+      <th>1С: Бухгалтерия</th>
+      <td>2060</td>
+    </tr>
+    <tr>
+      <th>1С: Управление Торговлей</th>
+      <td>2022</td>
+    </tr>
+    <tr>
+      <th>1С: Зарплата и управление персоналом</th>
+      <td>1927</td>
+    </tr>
+    <tr>
+      <th>1С: Документооборот</th>
+      <td>1533</td>
+    </tr>
+    <tr>
+      <th>1С: Управление Производственным Предприятием</th>
+      <td>932</td>
+    </tr>
+    <tr>
+      <th>1С: Комплексная автоматизация</th>
+      <td>865</td>
+    </tr>
+    <tr>
+      <th>ERP-системы на базе 1С</th>
+      <td>856</td>
+    </tr>
+    <tr>
+      <th>1C: Бухгалтерия</th>
+      <td>828</td>
+    </tr>
+  </tbody>
+</table>
+                <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>2022</th>
+      <th>Кол-во</th>
+    </tr>
+    <tr>
+      <th>Навык</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1С программирование</th>
+      <td>1441</td>
+    </tr>
+    <tr>
+      <th>1С: Предприятие 8</th>
+      <td>1115</td>
+    </tr>
+    <tr>
+      <th>1С: Зарплата и управление персоналом</th>
+      <td>627</td>
+    </tr>
+    <tr>
+      <th>1С: Управление Торговлей</th>
+      <td>557</td>
+    </tr>
+    <tr>
+      <th>1С: Бухгалтерия</th>
+      <td>548</td>
+    </tr>
+    <tr>
+      <th>1С: Документооборот</th>
+      <td>529</td>
+    </tr>
+    <tr>
+      <th>ERP-системы на базе 1С</th>
+      <td>283</td>
+    </tr>
+    <tr>
+      <th>1С: Комплексная автоматизация</th>
+      <td>276</td>
+    </tr>
+    <tr>
+      <th>1C: Бухгалтерия</th>
+      <td>236</td>
+    </tr>
+    <tr>
+      <th>Обновление конфигурации 1С</th>
+      <td>213</td>
+    </tr>
+  </tbody>
+</table>
+            </div>
+            <img class="skills_graph" src={% static "images/skills_graph.png" %}/>
+            <div class="empty_skills"></div>
+        </div>
+    </div>
+</main>
+<footer>
+</footer>
+</body>
+</html>
